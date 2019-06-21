@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="needit_gagana" max_length="40" name="x_58872_needit_needit_gagana" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="requested type" max_length="40" name="u_re" type="string"/>
+        <element label="requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="requested type" mandatory="true" max_length="40" name="u_requested_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="human resource" sequence="0" value="human resource"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="enter your department" sequence="3" value="enter your department"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="what needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="hr1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="hr2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="legal1" sequence="2" value="legal1"/>
+                <element inactive_on_update="false" label="legal2" sequence="3" value="legal2"/>
+                <element inactive_on_update="false" label="facilities1" sequence="4" value="facilities1"/>
+                <element inactive_on_update="false" label="facilities2" sequence="5" value="facilities2"/>
+                <element inactive_on_update="false" label="other department1" sequence="6" value="other department1"/>
+                <element inactive_on_update="false" label="other deparment2" sequence="7" value="other deparment2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="when neede" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
